@@ -84,7 +84,8 @@ hint: the strings returned need to exactly match the string in step 4.
 
 function getWinnersByYear(arr, getYearsCB, getWinnersCB) {
     const winners = getWinnersCB(arr).map(function(item, index){
-         return `In ${getYearsCB[index]}, ${item} won the world cup!`
+        console.log("T5", getYearsCB)
+         return `In ${getYearsCB(arr)[index]}, ${item} won the world cup!`
     }) 
     return winners
 }
